@@ -1,5 +1,4 @@
 package com.company.oop.encapsulation;
-
 import lombok.*;
 
 @NoArgsConstructor
@@ -9,10 +8,10 @@ import lombok.*;
 public class Role {
     private long id;
     private String description;
+}
 
-
-    // boilerplate code
-    /* public Role() {
+// boilerplate code
+ /* public Role() {
     }
 
     public Role(long id, String description) {
@@ -34,10 +33,10 @@ public class Role {
 
     public void setDescription(String description) {
         this.description = description;
-    } */
+    }
 
     // Instead of boilerplate code we will use LOMBOK
     // lombok dependency needs to be added into maven pom.xml file
     // Lombok plagin needs to be installed
     // Enable Annotation processing
-}
+    */

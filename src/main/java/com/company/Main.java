@@ -3,13 +3,19 @@ package com.company;
 import com.company.core.Loops;
 import com.company.core.Methods;
 import com.company.core.SelectionStatements;
+import com.company.oop.encapsulation.Role;
+import com.company.oop.encapsulation.User;
+import com.company.oop.inheritance.Project;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        //***********CORE***********//
+        //*********** CORE ***********//
 
         // METHODS
         Methods methods = new Methods();
@@ -25,11 +31,22 @@ public class Main {
         Loops.demoForIterator();
         Loops.demoForEach();
 
-
         // SELECTION STATEMENTS
         SelectionStatements.demoIfStatement();
         SelectionStatements.demoSwitchCaseStatement();
 
+
+        //*********** OOP ***********//
+
+        // ENCAPTULATION
+        User user = new User("Milica", "Jovanovic",  new Role(123456789, "Software Engineer"));
+        System.out.println(user.getFirstName());
+        System.out.println(user.getLastName());
+        System.out.println(user.getRole().getDescription());
+
+        // INHERITANCE
+       Project project = new Project(123, LocalDateTime.now(), 124, LocalDateTime.now().minusHours(2), 125, "CODE123", "New Project 123", new User("Mike", "Smith", new Role(12, "manager")), LocalDate.now(), LocalDate.now().plusDays(5),"IN PROGRESS", "New project" );
+        System.out.println(project.getId());
 
     }
 }
