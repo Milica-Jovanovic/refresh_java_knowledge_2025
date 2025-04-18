@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @Setter
-public class BaseEntity {
+public abstract class BaseEntity {
     private long id;
     private LocalDateTime insertDateTime;
     private long insertUserId;
@@ -19,3 +19,6 @@ public class BaseEntity {
     private long lastUpdateUserId;
 
 }
+
+// Abstract class can't be instantiated
+// We can call abstract class through it constructor and super keyword, like we did while creating project object
