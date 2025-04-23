@@ -1,5 +1,6 @@
 package com.company.oop.encapsulation;
 
+import com.company.enums.Gender;
 import lombok.*;
 
 @NoArgsConstructor
@@ -15,6 +16,7 @@ public class User {
 
     // Composition - class depends on another class (class have another class in it)
     private Role role;
+    private Gender gender;
 
 
     // command + N to bring autocomplete constructor, getter, setter...
