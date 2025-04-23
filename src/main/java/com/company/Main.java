@@ -79,5 +79,9 @@ public class Main {
         // Inheritance - we will have some BaseEntity classes that we can inherit, we need some data that we don't want to show in UI but we want it in DB so we will inherit it
         // Abstraction and Interfaces we will use a lot - all our application business logic will be created through interfaces, business logic will be created through services and this services will be implemented interfaces
         // Polymorphism - whenever you need to pass some object is the best to do it through polymorphic way
+
+        //*********** ENUM ***********//
+        System.out.println(Gender.FEMALE);
+
     }
 }
