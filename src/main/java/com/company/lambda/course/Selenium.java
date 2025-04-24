@@ -1,4 +1,4 @@
-package com.company.lambda;
+package com.company.lambda.course;
 
 public class Selenium implements Course {
 

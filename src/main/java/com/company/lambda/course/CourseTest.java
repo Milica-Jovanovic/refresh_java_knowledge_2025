@@ -1,10 +1,12 @@
-package com.company.lambda;
+package com.company.lambda.course;
 
 public class CourseTest {
 
     public static void main(String[] args) {
 
         //*********************************************
+        // If we have more than once abstract method we will use this way
+
         Course java = new Java();
         java.study();
 
@@ -33,12 +35,16 @@ public class CourseTest {
         selenium2.study();
 
         //*********************************************
+        // When we have only one abstract method we can use lambda
+
         Course javaCourse = () -> System.out.println("Studying Java");
         javaCourse.study();
 
         Course seleniumCourse = () -> System.out.println("Studying Selenium");
         seleniumCourse.study();
 
+        // We can use Lambda in a functional interface
+        // Functional interface is if our interface has only one abstract method
     }
 
 }
