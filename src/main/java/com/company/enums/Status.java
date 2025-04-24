@@ -1,8 +1,11 @@
 package com.company.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum Status {
 
-    OPEN("Open"), IN_PROGRESS("In progree"), UAT_TEST("UAT Testing"), COMPLETED("Completed");
+    OPEN("Open"), IN_PROGRESS("In progress"), UAT_TEST("UAT Testing"), COMPLETED("Completed");
 
     private final String value;
 

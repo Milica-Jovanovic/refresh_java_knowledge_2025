@@ -4,6 +4,7 @@ import com.company.core.Loops;
 import com.company.core.Methods;
 import com.company.core.SelectionStatements;
 import com.company.enums.Gender;
+import com.company.enums.Status;
 import com.company.oop.abstraction.implementation.UserServiceImplementation;
 import com.company.oop.abstraction.service.UserService;
 import com.company.oop.encapsulation.Role;
@@ -50,12 +51,12 @@ public class Main {
         System.out.println(user.getRole().getDescription());
 
         // INHERITANCE
-       Project project1 = new Project(123, LocalDateTime.now(), 124, LocalDateTime.now().minusHours(2), 125, "CODE123", "New Project 123", new User("Mike", "Smith", new Role(12, "manager"), Gender.MALE), LocalDate.now(), LocalDate.now().plusDays(5),"IN PROGRESS", "New project" );
+       Project project1 = new Project(123, LocalDateTime.now(), 124, LocalDateTime.now().minusHours(2), 125, "CODE123", "New Project 123", new User("Mike", "Smith", new Role(12, "manager"), Gender.MALE), LocalDate.now(), LocalDate.now().plusDays(5),Status.IN_PROGRESS, "New project" );
        System.out.println(project1.getId());
 
        Project project2 = new Project(1, LocalDateTime.now(), 1, LocalDateTime.now().minusHours(5),
                1, "PRJ001", "HR CRM", new User("Mike", "Smith", new Role(1, "Manager"), Gender.MALE),
-               LocalDate.now(), LocalDate.now().plusDays(5), "IN PROGRESS", "HR CRM Detail Info");
+               LocalDate.now(), LocalDate.now().plusDays(5), Status.IN_PROGRESS, "HR CRM Detail Info");
 
         // INTERFACE
 
@@ -82,6 +83,7 @@ public class Main {
 
         //*********** ENUM ***********//
         System.out.println(Gender.FEMALE);
-
+        System.out.println(Status.IN_PROGRESS);
+        System.out.println(Status.IN_PROGRESS.getValue().substring(0, 2));
     }
 }

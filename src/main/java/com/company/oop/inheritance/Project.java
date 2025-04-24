@@ -1,5 +1,6 @@
 package com.company.oop.inheritance;
 
+import com.company.enums.Status;
 import com.company.oop.encapsulation.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,13 +21,13 @@ public class Project extends BaseEntity {
     private User assignedManager;
     private LocalDate startDate;
     private LocalDate endDate;
-    private String projectStatus;
+    private Status projectStatus;
     private String projectDetails;
 
     // Lombok doesn't have annotation for super constructor with all arguments, that's why we added it manually
     // @AllArgsConstructor will bring default super constructor with no args
 
-    public Project(long id, LocalDateTime insertDateTime, long insertUserId, LocalDateTime lastUpdateTime, long lastUpdateUserId, String projectCode, String projectName, User assignedManager, LocalDate startDate, LocalDate endDate, String projectStatus, String projectDetails) {
+    public Project(long id, LocalDateTime insertDateTime, long insertUserId, LocalDateTime lastUpdateTime, long lastUpdateUserId, String projectCode, String projectName, User assignedManager, LocalDate startDate, LocalDate endDate, Status projectStatus, String projectDetails) {
         super(id, insertDateTime, insertUserId, lastUpdateTime, lastUpdateUserId);
         this.projectCode = projectCode;
         this.projectName = projectName;
